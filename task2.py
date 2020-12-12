@@ -27,7 +27,7 @@ scores = pd.read_csv(READ_FILENAME, delimiter=',', index_col=0, header=0)
 grades = scores.applymap(student_grades)
 
 pd.set_option('precision', 2) #for 2 decimal places
-x_mean = grades.mean(axis = 0)#individual gpa
-print(x_mean)
-x_gpa = grades.stack().mean()#calculate class gpa
-print(f'The class GPA is {x_gpa:.2f}')
+average = grades.mean(axis = 0)#individual gpa
+print(average)
+class_gpa = grades.stack().mean()#calculate class gpa
+print(f'The class GPA is {class_gpa:.2f}')
